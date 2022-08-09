@@ -19,7 +19,7 @@ class SlackDriver:
 
 
 if __name__ == '__main__':
-    # load_dotenv()
+    load_dotenv()
     webhook_url = os.getenv('WEBHOOK_URL')
     channel = os.getenv('CHANNEL')
     icon_url = os.getenv('ICON_URL')
