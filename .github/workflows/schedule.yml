@@ -17,9 +17,9 @@ jobs:
         python-version: '3.8'
         architecture: 'x64'
       env:
-        WEBHOOK_URL: ${WEBHOOK_URL}
-        CHANNEL: ${CHANNEL}
-        ICON_URL: ${ICON_URL}
+        WEBHOOK_URL: ${{ WEBHOOK_URL }}
+        CHANNEL: ${{ CHANNEL }}
+        ICON_URL: ${{ ICON_URL }}
     - name: Get Python version
       run: python -V
     - name: Install dependencies
