@@ -16,13 +16,13 @@ jobs:
       with:
         python-version: '3.8'
         architecture: 'x64'
-      env:
-        WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
-        CHANNEL: ${{secrets.CHANNEL}}
-        ICON_URL: ${{secrets.ICON_URL}}
     - name: Get Python version
       run: python -V
     - name: Install dependencies
       run: pip install -r requirements.txt
     - name: Run Python
+      env:
+        WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
+        CHANNEL: ${{secrets.CHANNEL}}
+        ICON_URL: ${{secrets.ICON_URL}}
       run: python send_message.py
